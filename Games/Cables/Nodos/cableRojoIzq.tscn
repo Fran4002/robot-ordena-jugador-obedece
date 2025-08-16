@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://2p5shpjo83rf"]
+
+[ext_resource type="Script" uid="uid://c6byg1yhghfp8" path="res://Games/Cables/cableRojoIzq.gd" id="1_bgbfi"]
+[ext_resource type="Texture2D" uid="uid://c3g1d32k3gcsj" path="res://Games/Cables/Assets/rojoIzq.png" id="1_vg0ki"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bgbfi"]
+radius = 19.0263
+
+[node name="CableRojoIzq" type="Node2D"]
+script = ExtResource("1_bgbfi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-24, 0)
+scale = Vector2(2.13044, 2.53333)
+texture = ExtResource("1_vg0ki")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_bgbfi")
+
+[node name="Line2D" type="Line2D" parent="."]
+default_color = Color(0.8, 0, 0, 1)
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
