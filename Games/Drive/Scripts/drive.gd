@@ -25,5 +25,4 @@ func _on_spawn_timer_timeout() -> void:
 	var height = randi_range(40, screen_size.y - 40)
 	ast.position = Vector2(screen_size.x + 40, height)
 	asteroids.append(ast)
-	print("Spawn Asteroid")
 	pass # Replace with function body.

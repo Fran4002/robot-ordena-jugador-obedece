@@ -74,6 +74,6 @@ func _process(delta: float) -> void:
 			queue.append(next)
 	var end = $"Pipe-End"
 	if end.checkRight() != null and $"Pipe-1".visited:
-		print("Connected")
+		get_tree().change_scene_to_file("res://Games/Drive/drive_main.tscn")
 		pass
 	pass

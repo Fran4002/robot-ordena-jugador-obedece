@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://2tvak5tl4xjb"]
+
+[ext_resource type="Script" uid="uid://ws04lsq0kq3j" path="res://Shared/Scripts/timer.gd" id="1_qdhxh"]
+
+[node name="ProgressBar" type="ProgressBar"]
+offset_right = 253.0
+offset_bottom = 27.0
+max_value = 15.0
+step = 0.1
+show_percentage = false
+script = ExtResource("1_qdhxh")

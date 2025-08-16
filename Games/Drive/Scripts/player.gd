@@ -13,5 +13,5 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("Collision")
-	get_tree().quit()
+	$"../ProgressBar"._game_over()
 	pass # Replace with function body.
