@@ -1,0 +1,142 @@
+[gd_scene load_steps=9 format=3 uid="uid://e8rsjhxgpvj"]
+
+[ext_resource type="Script" uid="uid://02kqmrajojbi" path="res://Games/Pipes/Scripts/pipes_main.gd" id="1_02wvk"]
+[ext_resource type="Texture2D" uid="uid://cii4uk0288fa8" path="res://icon.svg" id="2_1wo8n"]
+[ext_resource type="Script" uid="uid://csyltns0gbslh" path="res://Games/Pipes/Scripts/pipe_origin.gd" id="3_2fei0"]
+[ext_resource type="Script" uid="uid://ckqrq4p726ttp" path="res://Games/Pipes/Scripts/pipe_end.gd" id="4_d66di"]
+[ext_resource type="Texture2D" uid="uid://ewo5r1tmk4sk" path="res://Games/Pipes/Assets/tile019.png" id="5_y6fdj"]
+[ext_resource type="Script" uid="uid://bxlhtwywfi13" path="res://Games/Pipes/Scripts/pipe.gd" id="6_wkr0d"]
+[ext_resource type="Texture2D" uid="uid://lm2ywnc1b3oe" path="res://Games/Pipes/Assets/tile028.png" id="7_0hqn5"]
+[ext_resource type="Texture2D" uid="uid://bhkyaj4jh5bxg" path="res://Games/Pipes/Assets/tile015.png" id="8_fkyju"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -507.0
+offset_top = -208.0
+offset_right = -507.0
+offset_bottom = -208.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_02wvk")
+
+[node name="Pipe-Origin" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 1212.0
+offset_top = 556.0
+offset_right = 1340.0
+offset_bottom = 684.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("2_1wo8n")
+script = ExtResource("3_2fei0")
+
+[node name="Pipe-End" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 700.0
+offset_top = 300.0
+offset_right = 828.0
+offset_bottom = 428.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("2_1wo8n")
+script = ExtResource("4_d66di")
+
+[node name="Pipe-1" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 828.0
+offset_top = 300.0
+offset_right = 956.0
+offset_bottom = 428.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("5_y6fdj")
+stretch_mode = 0
+script = ExtResource("6_wkr0d")
+
+[node name="Pipe-2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 956.0
+offset_top = 300.0
+offset_right = 1084.0
+offset_bottom = 428.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("7_0hqn5")
+stretch_mode = 0
+script = ExtResource("6_wkr0d")
+
+[node name="Pipe-3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1084.0
+offset_top = 300.0
+offset_right = 1212.0
+offset_bottom = 428.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("7_0hqn5")
+stretch_mode = 0
+script = ExtResource("6_wkr0d")
+
+[node name="Pipe-4" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 828.0
+offset_top = 428.0
+offset_right = 956.0
+offset_bottom = 556.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("7_0hqn5")
+stretch_mode = 0
+script = ExtResource("6_wkr0d")
+
+[node name="Pipe-5" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 956.0
+offset_top = 428.0
+offset_right = 1084.0
+offset_bottom = 556.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("5_y6fdj")
+stretch_mode = 0
+script = ExtResource("6_wkr0d")
+
+[node name="Pipe-6" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1084.0
+offset_top = 428.0
+offset_right = 1212.0
+offset_bottom = 556.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("5_y6fdj")
+stretch_mode = 0
+script = ExtResource("6_wkr0d")
+
+[node name="Pipe-7" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 828.0
+offset_top = 556.0
+offset_right = 956.0
+offset_bottom = 684.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("5_y6fdj")
+stretch_mode = 0
+script = ExtResource("6_wkr0d")
+
+[node name="Pipe-8" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 956.0
+offset_top = 556.0
+offset_right = 1084.0
+offset_bottom = 684.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("7_0hqn5")
+stretch_mode = 0
+script = ExtResource("6_wkr0d")
+
+[node name="Pipe-9" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1084.0
+offset_top = 556.0
+offset_right = 1212.0
+offset_bottom = 684.0
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("8_fkyju")
+stretch_mode = 0
+script = ExtResource("6_wkr0d")

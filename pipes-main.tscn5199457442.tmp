@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://e8rsjhxgpvj"]
+
+[ext_resource type="Script" uid="uid://02kqmrajojbi" path="res://Games/Pipes/Scripts/pipes_main.gd" id="1_8kid3"]
+[ext_resource type="Texture2D" uid="uid://cii4uk0288fa8" path="res://icon.svg" id="1_lnvvl"]
+[ext_resource type="Script" uid="uid://bxlhtwywfi13" path="res://Games/Pipes/Scripts/pipe.gd" id="3_i7got"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -507.0
+offset_top = -208.0
+offset_right = -507.0
+offset_bottom = -208.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8kid3")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 230.0
+offset_right = 1258.0
+offset_bottom = 754.0
+columns = 3
+
+[node name="Pipe-9" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
+
+[node name="Pipe-8" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
+
+[node name="Pipe-7" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
+
+[node name="Pipe-6" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
+
+[node name="Pipe-5" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
+
+[node name="Pipe-4" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
+
+[node name="Pipe-3" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
+
+[node name="Pipe-2" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
+
+[node name="Pipe-1" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
+
+[node name="Pipe-End" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
+
+[node name="Pipe-Origin" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_lnvvl")
+script = ExtResource("3_i7got")
