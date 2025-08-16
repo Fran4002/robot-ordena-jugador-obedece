@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var speed = 800
 var mouse_position = null
-
+#hola
 func _physics_process(delta: float) -> void:
 	var vel = Vector2()
 	mouse_position = get_global_mouse_position()
