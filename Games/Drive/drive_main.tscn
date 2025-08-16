@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3qkte1xjtfo8"]
+
+[ext_resource type="Script" uid="uid://d4j24r4dej7w2" path="res://Games/Drive/Scripts/drive.gd" id="1_ghejo"]
+[ext_resource type="PackedScene" uid="uid://co5r88qv1vih1" path="res://Games/Drive/player.tscn" id="1_owb6g"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ghejo")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 1.2
+autostart = true
+
+[node name="Player" parent="." instance=ExtResource("1_owb6g")]
+position = Vector2(191, 309)
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

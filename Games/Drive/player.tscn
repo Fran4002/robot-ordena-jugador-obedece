@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://co5r88qv1vih1"]
+
+[ext_resource type="Script" uid="uid://vhj81kgior13" path="res://Games/Drive/Scripts/player.gd" id="1_ai66v"]
+[ext_resource type="Texture2D" uid="uid://bs3y44i0bvsj1" path="res://Games/Drive/Assets/Ship/1.png" id="2_r6l1x"]
+[ext_resource type="Texture2D" uid="uid://ydwcxtpfqxjc" path="res://Games/Drive/Assets/Ship/2.png" id="3_hdc2a"]
+[ext_resource type="Texture2D" uid="uid://mvw0ybu8xseu" path="res://Games/Drive/Assets/Ship/3.png" id="4_4dpq3"]
+[ext_resource type="Texture2D" uid="uid://bt1vaqsm8186p" path="res://Games/Drive/Assets/Ship/4.png" id="5_arfo7"]
+[ext_resource type="Texture2D" uid="uid://dxa7uia6n4s71" path="res://Games/Drive/Assets/Ship/5.png" id="6_c4i5q"]
+[ext_resource type="Texture2D" uid="uid://c7mvj0olqccwo" path="res://Games/Drive/Assets/Ship/6.png" id="7_xfmg0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eydr8"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r6l1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hdc2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4dpq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_arfo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c4i5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xfmg0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lad6q"]
+size = Vector2(140, 86)
+
+[node name="Player" type="CharacterBody2D"]
+disable_mode = 2
+collision_layer = 3
+collision_mask = 3
+motion_mode = 1
+floor_block_on_wall = false
+script = ExtResource("1_ai66v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_eydr8")
+frame_progress = 0.550811
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(9, -3)
+shape = SubResource("RectangleShape2D_lad6q")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
