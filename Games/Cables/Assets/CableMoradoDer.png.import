@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3g1d32k3gcsj"
-path="res://.godot/imported/rojoIzq.png-6e9478c24fa46e6e6f435f0042803516.ctex"
+uid="uid://cy31xgewvnykl"
+path="res://.godot/imported/CableMoradoDer.png-c834870adb8ef6e8cffb34285f9dbd0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Games/Cables/Assets/rojoIzq.png"
-dest_files=["res://.godot/imported/rojoIzq.png-6e9478c24fa46e6e6f435f0042803516.ctex"]
+source_file="res://Games/Cables/Assets/CableMoradoDer.png"
+dest_files=["res://.godot/imported/CableMoradoDer.png-c834870adb8ef6e8cffb34285f9dbd0e.ctex"]
 
 [params]
 

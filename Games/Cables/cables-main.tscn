@@ -19,11 +19,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_s65jf")
 
-[node name="CablesIzq" parent="." instance=ExtResource("1_twogd")]
-position = Vector2(385, 321)
-
 [node name="CablesDer" parent="." instance=ExtResource("2_00lh8")]
 position = Vector2(665, 317)
+
+[node name="CablesIzq" parent="." instance=ExtResource("1_twogd")]
+position = Vector2(385, 321)
 
 [node name="ProgressBar" parent="." instance=ExtResource("3_00lh8")]
 offset_left = 784.0

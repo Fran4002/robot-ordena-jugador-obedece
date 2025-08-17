@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wnxuodyn8qew"
-path="res://.godot/imported/amarilloDer.png-abeef8dd9d1af7cc96cf7709efbc0900.ctex"
+uid="uid://btqdxkvfb3afa"
+path="res://.godot/imported/CableRojo.png-1618797b12e95bd6af1ef0f2dc40fece.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Games/Cables/Assets/amarilloDer.png"
-dest_files=["res://.godot/imported/amarilloDer.png-abeef8dd9d1af7cc96cf7709efbc0900.ctex"]
+source_file="res://Games/Cables/Assets/CableRojo.png"
+dest_files=["res://.godot/imported/CableRojo.png-1618797b12e95bd6af1ef0f2dc40fece.ctex"]
 
 [params]
 

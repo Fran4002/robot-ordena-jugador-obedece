@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://2p5shpjo83rf"]
 
 [ext_resource type="Script" uid="uid://c6byg1yhghfp8" path="res://Games/Cables/Scripts/cablesIzq.gd" id="1_bgbfi"]
-[ext_resource type="Texture2D" uid="uid://c3g1d32k3gcsj" path="res://Games/Cables/Assets/rojoIzq.png" id="1_vg0ki"]
-[ext_resource type="Texture2D" uid="uid://dtgp34v8d7fk3" path="res://Games/Cables/Assets/amarilloIzq.png" id="3_5ujhf"]
-[ext_resource type="Texture2D" uid="uid://dfh0it64nnwjg" path="res://Games/Cables/Assets/moradoIzq.png" id="4_0xr8k"]
+[ext_resource type="Texture2D" uid="uid://btqdxkvfb3afa" path="res://Games/Cables/Assets/CableRojo.png" id="2_0xr8k"]
+[ext_resource type="Texture2D" uid="uid://b04ulsv8ba0v0" path="res://Games/Cables/Assets/CableAmarillo.png" id="3_0xr8k"]
+[ext_resource type="Texture2D" uid="uid://vjyys48ktsvr" path="res://Games/Cables/Assets/CableMorado.png" id="4_0xr8k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bgbfi"]
 radius = 19.0263
@@ -18,9 +18,9 @@ radius = 18.4391
 script = ExtResource("1_bgbfi")
 
 [node name="SpriteRojo" type="Sprite2D" parent="."]
-position = Vector2(-24, 0)
-scale = Vector2(2.13044, 2.53333)
-texture = ExtResource("1_vg0ki")
+position = Vector2(-132, 103.5)
+scale = Vector2(4.71875, 3.82812)
+texture = ExtResource("2_0xr8k")
 
 [node name="AreaRojo" type="Area2D" parent="."]
 
@@ -31,9 +31,9 @@ shape = SubResource("CircleShape2D_bgbfi")
 default_color = Color(0.8, 0, 0, 1)
 
 [node name="SpriteAmarillo" type="Sprite2D" parent="."]
-position = Vector2(-24, 57)
-scale = Vector2(2.15556, 2.4)
-texture = ExtResource("3_5ujhf")
+position = Vector2(-131.744, 74)
+scale = Vector2(4.71077, 3.68848)
+texture = ExtResource("3_0xr8k")
 
 [node name="AreaAmarillo" type="Area2D" parent="."]
 
@@ -45,8 +45,8 @@ shape = SubResource("CircleShape2D_0xr8k")
 default_color = Color(0.947696, 0.902528, 7.70092e-07, 1)
 
 [node name="SpriteMorado" type="Sprite2D" parent="."]
-position = Vector2(-23, -53)
-scale = Vector2(2.25, 2.23437)
+position = Vector2(-131, 8)
+scale = Vector2(4.75, 3.85938)
 texture = ExtResource("4_0xr8k")
 
 [node name="AreaMorado" type="Area2D" parent="."]
