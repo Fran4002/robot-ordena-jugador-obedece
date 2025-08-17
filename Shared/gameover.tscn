@@ -11,7 +11,7 @@ func _on_salir_pressed() -> void:
 
 
 func _on_reiniciar_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Games/Pipes/pipes-main.tscn\") # Volver al primer escenario
+	get_tree().change_scene_to_file(\"res://Games/Cables/cables-main.tscn\") # Volver al primer escenario
 "
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7kbtt"]
@@ -41,6 +41,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = -1.0
 offset_right = 1152.0
 offset_bottom = 647.0

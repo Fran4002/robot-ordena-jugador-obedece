@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://duih7v3cjxwu6"]
+[gd_scene load_steps=6 format=3 uid="uid://duih7v3cjxwu6"]
 
 [ext_resource type="Script" uid="uid://b6lveqgu6alet" path="res://Games/Bugs/Scripts/bugs_main.gd" id="1_1hkc2"]
 [ext_resource type="PackedScene" uid="uid://d0ncok11q5qsd" path="res://Games/Bugs/bug.tscn" id="1_trrkv"]
 [ext_resource type="PackedScene" uid="uid://2tvak5tl4xjb" path="res://Shared/timer.tscn" id="3_2wnxd"]
+[ext_resource type="Texture2D" uid="uid://bkjyq5g2slxkl" path="res://TV.png" id="4_2wnxd"]
+[ext_resource type="Script" uid="uid://3nh4ilk83wn0" path="res://Games/Bugs/texture_rect.gd" id="5_rgwgw"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1hkc2")
@@ -34,3 +36,10 @@ position = Vector2(952, 438)
 
 [node name="Bug7" parent="." instance=ExtResource("1_trrkv")]
 position = Vector2(706, 439)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1153.0
+offset_bottom = 647.0
+texture = ExtResource("4_2wnxd")
+script = ExtResource("5_rgwgw")
