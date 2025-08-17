@@ -4,8 +4,8 @@ extends ProgressBar
 @export var continueOnTimeout : bool = false
 
 var progress_bar = self
-var time_remaining: float = 15.0
-var max_time: float = 15.0
+var time_remaining: float = 10.0
+var max_time: float = 10.0
 
 func _ready():
 	progress_bar.max_value = max_time
