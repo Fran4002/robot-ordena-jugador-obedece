@@ -5,9 +5,10 @@ extends ProgressBar
 
 var progress_bar = self
 var time_remaining: float = 10.0
-var max_time: float = 10.0
+@export var max_time: float = 10.0
 
 func _ready():
+	time_remaining = max_time
 	progress_bar.max_value = max_time
 	progress_bar.value = max_time
 

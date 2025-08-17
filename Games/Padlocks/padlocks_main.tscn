@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://csa800mt3ikwj"]
+[gd_scene load_steps=6 format=3 uid="uid://csa800mt3ikwj"]
 
 [ext_resource type="Script" uid="uid://u08fmoms33bq" path="res://Games/Padlocks/Scripts/padlocks_main.gd" id="1_166ec"]
 [ext_resource type="PackedScene" uid="uid://bpn3vhco752hu" path="res://Games/Padlocks/padlock.tscn" id="1_fxi86"]
 [ext_resource type="Texture2D" uid="uid://bkjyq5g2slxkl" path="res://TV.png" id="2_jyp0o"]
 [ext_resource type="PackedScene" uid="uid://2tvak5tl4xjb" path="res://Shared/timer.tscn" id="3_qepfn"]
+[ext_resource type="AudioStream" uid="uid://cga7lo3037upu" path="res://music.wav" id="5_rx7lx"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -61,3 +62,7 @@ offset_top = 108.0
 offset_right = 1045.0
 offset_bottom = 135.0
 nextScene = "res://Games/Pipes/pipes-main.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_rx7lx")
+autoplay = true

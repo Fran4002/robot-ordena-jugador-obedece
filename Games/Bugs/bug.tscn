@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0ncok11q5qsd"]
+[gd_scene load_steps=5 format=3 uid="uid://d0ncok11q5qsd"]
 
 [ext_resource type="Script" uid="uid://ol60ski1v7w6" path="res://Games/Bugs/Scripts/Bug.gd" id="1_nnjpv"]
 [ext_resource type="Texture2D" uid="uid://c3mweprax1l4o" path="res://Games/Bugs/Assets/Bug.png" id="2_ka50r"]
+[ext_resource type="AudioStream" uid="uid://cga7lo3037upu" path="res://music.wav" id="3_k1605"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ka50r"]
 radius = 24.0
@@ -19,6 +20,11 @@ texture = ExtResource("2_ka50r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_ka50r")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_k1605")
+volume_db = -17.197
+autoplay = true
 
 [connection signal="input_event" from="Area2D" to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_mouse_entered"]

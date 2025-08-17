@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://e8rsjhxgpvj"]
+[gd_scene load_steps=13 format=3 uid="uid://e8rsjhxgpvj"]
 
 [ext_resource type="Script" uid="uid://02kqmrajojbi" path="res://Games/Pipes/Scripts/pipes_main.gd" id="1_02wvk"]
 [ext_resource type="Texture2D" uid="uid://cii4uk0288fa8" path="res://icon.svg" id="2_1wo8n"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://lm2ywnc1b3oe" path="res://Games/Pipes/Assets/tile028.png" id="7_0hqn5"]
 [ext_resource type="Texture2D" uid="uid://bhkyaj4jh5bxg" path="res://Games/Pipes/Assets/tile015.png" id="8_fkyju"]
 [ext_resource type="PackedScene" uid="uid://2tvak5tl4xjb" path="res://Shared/timer.tscn" id="9_1wo8n"]
+[ext_resource type="AudioStream" uid="uid://cga7lo3037upu" path="res://music.wav" id="11_d66di"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fei0"]
 bg_color = Color(0.284422, 0.703931, 0.293556, 1)
@@ -173,3 +174,7 @@ pivot_offset = Vector2(64, 64)
 texture_normal = ExtResource("8_fkyju")
 stretch_mode = 0
 script = ExtResource("6_wkr0d")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_d66di")
+autoplay = true

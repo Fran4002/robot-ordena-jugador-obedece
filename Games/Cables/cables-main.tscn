@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmt774x0tsffs"]
+[gd_scene load_steps=6 format=3 uid="uid://dmt774x0tsffs"]
 
 [ext_resource type="Texture2D" uid="uid://bkjyq5g2slxkl" path="res://TV.png" id="1_s65jf"]
 [ext_resource type="PackedScene" uid="uid://2p5shpjo83rf" path="res://Games/Cables/Nodos/cablesIzq.tscn" id="1_twogd"]
 [ext_resource type="PackedScene" uid="uid://yrne38hnos8j" path="res://Games/Cables/Nodos/cablesDer.tscn" id="2_00lh8"]
 [ext_resource type="PackedScene" uid="uid://2tvak5tl4xjb" path="res://Shared/timer.tscn" id="3_00lh8"]
+[ext_resource type="AudioStream" uid="uid://cga7lo3037upu" path="res://music.wav" id="5_wujha"]
 
 [node name="Cables-main" type="Node2D"]
 
@@ -19,11 +20,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_s65jf")
 
-[node name="CablesIzq" parent="." instance=ExtResource("1_twogd")]
-position = Vector2(385, 321)
-
 [node name="CablesDer" parent="." instance=ExtResource("2_00lh8")]
 position = Vector2(665, 317)
+
+[node name="CablesIzq" parent="." instance=ExtResource("1_twogd")]
+position = Vector2(385, 321)
 
 [node name="ProgressBar" parent="." instance=ExtResource("3_00lh8")]
 offset_left = 784.0
@@ -31,6 +32,10 @@ offset_top = 117.0
 offset_right = 1037.0
 offset_bottom = 144.0
 nextScene = "res://Games/Padlocks/padlocks_main.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wujha")
+autoplay = true
 
 [connection signal="cableAmarilloDer_clicked" from="CablesDer" to="CablesIzq" method="_on_cables_der_cable_amarillo_der_clicked"]
 [connection signal="cableMoradoDer_clicked" from="CablesDer" to="CablesIzq" method="_on_cables_der_cable_morado_der_clicked"]
