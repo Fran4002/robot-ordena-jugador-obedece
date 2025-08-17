@@ -7,30 +7,30 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1hkc2")
 
+[node name="ProgressBar" parent="." instance=ExtResource("3_2wnxd")]
+offset_left = 795.0
+offset_top = 106.0
+offset_right = 1048.0
+offset_bottom = 133.0
+nextScene = "res://Games/Drive/drive_main.tscn"
+
 [node name="Bug" parent="." instance=ExtResource("1_trrkv")]
-position = Vector2(648, 120)
+position = Vector2(526, 402)
 
 [node name="Bug2" parent="." instance=ExtResource("1_trrkv")]
-position = Vector2(99, 540)
+position = Vector2(238, 436)
 
 [node name="Bug3" parent="." instance=ExtResource("1_trrkv")]
-position = Vector2(153, 113)
+position = Vector2(283, 260)
 
 [node name="Bug4" parent="." instance=ExtResource("1_trrkv")]
-position = Vector2(483, 309)
+position = Vector2(589, 239)
 
 [node name="Bug5" parent="." instance=ExtResource("1_trrkv")]
-position = Vector2(889, 210)
+position = Vector2(821, 216)
 
 [node name="Bug6" parent="." instance=ExtResource("1_trrkv")]
-position = Vector2(279, 472)
+position = Vector2(952, 438)
 
 [node name="Bug7" parent="." instance=ExtResource("1_trrkv")]
-position = Vector2(721, 441)
-
-[node name="ProgressBar" parent="." instance=ExtResource("3_2wnxd")]
-offset_left = 55.0
-offset_top = 582.0
-offset_right = 308.0
-offset_bottom = 609.0
-nextScene = "res://Games/Drive/drive_main.tscn"
+position = Vector2(706, 439)
