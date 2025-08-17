@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://2p5shpjo83rf"]
+
+[ext_resource type="Script" uid="uid://c6byg1yhghfp8" path="res://Games/Cables/Scripts/cablesIzq.gd" id="1_bgbfi"]
+[ext_resource type="Texture2D" uid="uid://c3g1d32k3gcsj" path="res://Games/Cables/Assets/rojoIzq.png" id="1_vg0ki"]
+[ext_resource type="Texture2D" uid="uid://dtgp34v8d7fk3" path="res://Games/Cables/Assets/amarilloIzq.png" id="3_5ujhf"]
+[ext_resource type="Texture2D" uid="uid://dfh0it64nnwjg" path="res://Games/Cables/Assets/moradoIzq.png" id="4_0xr8k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bgbfi"]
+radius = 19.0263
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xr8k"]
+radius = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uvlu6"]
+radius = 18.4391
+
+[node name="CablesIzq" type="Node2D"]
+script = ExtResource("1_bgbfi")
+
+[node name="SpriteRojo" type="Sprite2D" parent="."]
+position = Vector2(-24, 0)
+scale = Vector2(2.13044, 2.53333)
+texture = ExtResource("1_vg0ki")
+
+[node name="AreaRojo" type="Area2D" parent="."]
+
+[node name="CollisionRojo" type="CollisionShape2D" parent="AreaRojo"]
+shape = SubResource("CircleShape2D_bgbfi")
+
+[node name="LineRojo" type="Line2D" parent="."]
+default_color = Color(0.8, 0, 0, 1)
+
+[node name="SpriteAmarillo" type="Sprite2D" parent="."]
+position = Vector2(-24, 57)
+scale = Vector2(2.15556, 2.4)
+texture = ExtResource("3_5ujhf")
+
+[node name="AreaAmarillo" type="Area2D" parent="."]
+
+[node name="CollisionAmarillo" type="CollisionShape2D" parent="AreaAmarillo"]
+position = Vector2(0, 57)
+shape = SubResource("CircleShape2D_0xr8k")
+
+[node name="LineAmarillo" type="Line2D" parent="."]
+default_color = Color(0.947696, 0.902528, 7.70092e-07, 1)
+
+[node name="SpriteMorado" type="Sprite2D" parent="."]
+position = Vector2(-23, -53)
+scale = Vector2(2.25, 2.23437)
+texture = ExtResource("4_0xr8k")
+
+[node name="AreaMorado" type="Area2D" parent="."]
+
+[node name="CollisionMorado" type="CollisionShape2D" parent="AreaMorado"]
+position = Vector2(3, -53)
+shape = SubResource("CircleShape2D_uvlu6")
+
+[node name="LineMorado" type="Line2D" parent="."]
+default_color = Color(1, 0, 1, 1)
+
+[connection signal="input_event" from="AreaRojo" to="." method="_on_area_rojo_input_event"]
+[connection signal="input_event" from="AreaAmarillo" to="." method="_on_area_amarillo_input_event"]
+[connection signal="input_event" from="AreaMorado" to="." method="_on_area_morado_input_event"]

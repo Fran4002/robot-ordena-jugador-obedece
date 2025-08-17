@@ -1,14 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmt774x0tsffs"]
 
-[ext_resource type="PackedScene" uid="uid://2p5shpjo83rf" path="res://Games/Cables/Nodos/cableRojoIzq.tscn" id="1_twogd"]
-[ext_resource type="PackedScene" uid="uid://yrne38hnos8j" path="res://Games/Cables/Nodos/cableRojoDer.tscn" id="2_00lh8"]
+[ext_resource type="PackedScene" uid="uid://2p5shpjo83rf" path="res://Games/Cables/Nodos/cablesIzq.tscn" id="1_twogd"]
+[ext_resource type="PackedScene" uid="uid://yrne38hnos8j" path="res://Games/Cables/Nodos/cablesDer.tscn" id="2_00lh8"]
 
 [node name="Cables-main" type="Node2D"]
 
-[node name="CableRojoIzq" parent="." instance=ExtResource("1_twogd")]
+[node name="CablesIzq" parent="." instance=ExtResource("1_twogd")]
 position = Vector2(327, 174)
 
-[node name="CableRojoDer" parent="." instance=ExtResource("2_00lh8")]
-position = Vector2(614, 229)
+[node name="CablesDer" parent="." instance=ExtResource("2_00lh8")]
+position = Vector2(483, 174)
 
-[connection signal="cableRojoDer_cliked" from="CableRojoDer" to="CableRojoIzq" method="_on_cable_rojo_der_cable_rojo_der_cliked"]
+[connection signal="cableAmarilloDer_clicked" from="CablesDer" to="CablesIzq" method="_on_cables_der_cable_amarillo_der_clicked"]
+[connection signal="cableMoradoDer_clicked" from="CablesDer" to="CablesIzq" method="_on_cables_der_cable_morado_der_clicked"]
+[connection signal="cableRojoDer_cliked" from="CablesDer" to="CablesIzq" method="_on_cables_der_cable_rojo_der_cliked"]
