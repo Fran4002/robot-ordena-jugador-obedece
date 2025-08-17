@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://emks3kntbgpa"]
+[gd_scene load_steps=3 format=3 uid="uid://emks3kntbgpa"]
 
 [ext_resource type="Script" uid="uid://b23b0q5tn1dm0" path="res://Games/Palabras/WordGame.cs" id="1_rsm76"]
+[ext_resource type="PackedScene" uid="uid://2tvak5tl4xjb" path="res://Shared/timer.tscn" id="2_v2qjv"]
 
 [node name="WorldGame" type="Node2D"]
 script = ExtResource("1_rsm76")
@@ -32,9 +33,13 @@ layout_mode = 2
 text = "Intentos: 0/3"
 
 [node name="TimeLabel" type="Label" parent="UI/GameInfo"]
-visible = false
 layout_mode = 2
 text = "Tiempo: 60s"
+
+[node name="ProgressBar" parent="UI/GameInfo" instance=ExtResource("2_v2qjv")]
+z_index = 1
+layout_mode = 2
+max_time = 30.0
 
 [node name="WordContainer" type="HBoxContainer" parent="UI"]
 custom_minimum_size = Vector2(400, 100)
@@ -126,7 +131,7 @@ grow_vertical = 2
 text = "Reintentar"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 40.0
+wait_time = 30.0
 one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

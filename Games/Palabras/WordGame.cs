@@ -37,7 +37,7 @@ public partial class WordGame : Node2D
 	private int maxAttempts = 100;
 	private int wordsCompleted = 0; // Palabras completadas correctamente
 	private int targetWords = 3; // Necesita completar 4 palabras para ganar
-	private float gameTime = 180.0f; // 3 minutos para completar las 4 palabras
+	private float gameTime = 30.0f; // 3 minutos para completar las 4 palabras
 	private bool isGameActive = false;
 
 	// Texturas de letras
@@ -190,7 +190,11 @@ public partial class WordGame : Node2D
 			if (wordsCompleted >= targetWords)
 			{
 				// ¡Completó las 4 palabras! ¡Ganó!
-				EndGame(true);
+				PackedScene newScene = GD.Load<PackedScene>("res://Shared/end.tscn");
+
+				// Then change to the loaded scene
+				GetTree().ChangeSceneToPacked(newScene);
+				//EndGame(true);
 			}
 			else
 			{

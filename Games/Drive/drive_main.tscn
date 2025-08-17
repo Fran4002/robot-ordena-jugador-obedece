@@ -43,6 +43,7 @@ offset_left = 793.0
 offset_top = 107.0
 offset_right = 1046.0
 offset_bottom = 134.0
+nextScene = "res://Games/Palabras/WorldGame.tscn"
 continueOnTimeout = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
