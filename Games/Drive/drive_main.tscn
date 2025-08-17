@@ -1,9 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3qkte1xjtfo8"]
+[gd_scene load_steps=10 format=3 uid="uid://c3qkte1xjtfo8"]
 
 [ext_resource type="Script" uid="uid://d4j24r4dej7w2" path="res://Games/Drive/Scripts/drive.gd" id="1_ghejo"]
 [ext_resource type="PackedScene" uid="uid://co5r88qv1vih1" path="res://Games/Drive/player.tscn" id="1_owb6g"]
 [ext_resource type="Texture2D" uid="uid://bkjyq5g2slxkl" path="res://TV.png" id="2_1e82g"]
 [ext_resource type="PackedScene" uid="uid://2tvak5tl4xjb" path="res://Shared/timer.tscn" id="2_ghejo"]
+[ext_resource type="Texture2D" uid="uid://bpx64ihrgv8h7" path="res://Games/Drive/Assets/tile000.png" id="5_k4ya2"]
+[ext_resource type="Texture2D" uid="uid://31jmhmbtynoi" path="res://Games/Drive/Assets/tile001.png" id="6_pav7s"]
+[ext_resource type="Texture2D" uid="uid://cikbxity338w" path="res://Games/Drive/Assets/tile002.png" id="7_7e4sx"]
+[ext_resource type="Texture2D" uid="uid://ccu56sqko7gq5" path="res://Games/Drive/Assets/tile003.png" id="8_n2xi6"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_4fqmh"]
+frames = 4
+frame_0/texture = ExtResource("5_k4ya2")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("6_pav7s")
+frame_1/duration = 0.5
+frame_2/texture = ExtResource("7_7e4sx")
+frame_2/duration = 0.5
+frame_3/texture = ExtResource("8_n2xi6")
+frame_3/duration = 0.5
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ghejo")
@@ -14,7 +29,13 @@ wait_time = 1.2
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource("1_owb6g")]
-position = Vector2(253, 330)
+position = Vector2(181, 327)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1153.0
+offset_bottom = 647.0
+texture = ExtResource("2_1e82g")
 
 [node name="ProgressBar" parent="." instance=ExtResource("2_ghejo")]
 offset_left = 793.0
@@ -23,10 +44,12 @@ offset_right = 1046.0
 offset_bottom = 134.0
 continueOnTimeout = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
-texture_filter = 1
-offset_right = 1153.0
-offset_bottom = 647.0
-texture = ExtResource("2_1e82g")
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = -10
+offset_left = 1.0
+offset_right = 1148.0
+offset_bottom = 646.0
+texture = SubResource("AnimatedTexture_4fqmh")
+stretch_mode = 1
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
