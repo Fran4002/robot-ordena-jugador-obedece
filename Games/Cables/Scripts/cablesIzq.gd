@@ -1,5 +1,7 @@
 extends Node2D
 
+var count := 0
+
 # var cable Rojo
 var draggingR := false #Para saber si estoy arrastrando
 var line_createdR := false
@@ -32,6 +34,11 @@ func _process(delta):
 		lineA.set_point_position(1, to_local(get_global_mouse_position()))
 	if draggingM:
 		lineM.set_point_position(1, to_local(get_global_mouse_position()))
+		
+	if count >= 3:
+		# CAMBIAR DE ESCENA
+		get_tree().change_scene_to_file("res://Games/Padlocks/padlocks_main.tscn")
+		print("YOU WIN")
 
 
 # Eventos Cable Rojo
@@ -46,6 +53,8 @@ func _on_area_rojo_input_event(viewport: Node, event: InputEvent, shape_idx: int
 			lineR.add_point(to_local(get_global_mouse_position())) # punto final
 
 func _on_cables_der_cable_rojo_der_cliked() -> void:
+	if draggingR:
+		count = count + 1
 	draggingR = false
 
 
@@ -61,6 +70,8 @@ func _on_area_amarillo_input_event(viewport: Node, event: InputEvent, shape_idx:
 			lineA.add_point(to_local(get_global_mouse_position())) # punto final
 
 func _on_cables_der_cable_amarillo_der_clicked() -> void:
+	if draggingA:
+		count = count + 1
 	draggingA = false
 
 
@@ -77,4 +88,6 @@ func _on_area_morado_input_event(viewport: Node, event: InputEvent, shape_idx: i
 
 
 func _on_cables_der_cable_morado_der_clicked() -> void:
+	if draggingM:
+		count = count + 1
 	draggingM = false
