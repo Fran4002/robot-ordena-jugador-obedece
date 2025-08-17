@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3qkte1xjtfo8"]
+[gd_scene load_steps=11 format=3 uid="uid://c3qkte1xjtfo8"]
 
 [ext_resource type="Script" uid="uid://d4j24r4dej7w2" path="res://Games/Drive/Scripts/drive.gd" id="1_ghejo"]
 [ext_resource type="PackedScene" uid="uid://co5r88qv1vih1" path="res://Games/Drive/player.tscn" id="1_owb6g"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://31jmhmbtynoi" path="res://Games/Drive/Assets/tile001.png" id="6_pav7s"]
 [ext_resource type="Texture2D" uid="uid://cikbxity338w" path="res://Games/Drive/Assets/tile002.png" id="7_7e4sx"]
 [ext_resource type="Texture2D" uid="uid://ccu56sqko7gq5" path="res://Games/Drive/Assets/tile003.png" id="8_n2xi6"]
+[ext_resource type="AudioStream" uid="uid://cga7lo3037upu" path="res://music.wav" id="9_pav7s"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_4fqmh"]
 frames = 4
@@ -51,5 +52,9 @@ offset_right = 1148.0
 offset_bottom = 646.0
 texture = SubResource("AnimatedTexture_4fqmh")
 stretch_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_pav7s")
+autoplay = true
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

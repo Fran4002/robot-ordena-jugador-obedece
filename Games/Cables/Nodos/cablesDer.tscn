@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://yrne38hnos8j"]
 
 [ext_resource type="Script" uid="uid://nvc18246y0w7" path="res://Games/Cables/Scripts/cablesDer.gd" id="1_0npja"]
-[ext_resource type="Texture2D" uid="uid://ghr8qtylheyt" path="res://Games/Cables/Assets/rojoDer.png" id="1_des1c"]
-[ext_resource type="Texture2D" uid="uid://wnxuodyn8qew" path="res://Games/Cables/Assets/amarilloDer.png" id="3_r45m8"]
-[ext_resource type="Texture2D" uid="uid://blbkhykvowhkh" path="res://Games/Cables/Assets/moradoDer.png" id="4_4jq0r"]
+[ext_resource type="Texture2D" uid="uid://dcpai31it32wp" path="res://Games/Cables/Assets/CableRojoDer.png" id="2_4jq0r"]
+[ext_resource type="Texture2D" uid="uid://l2h2bgqng5gl" path="res://Games/Cables/Assets/CableAmarilloDer.png" id="3_4jq0r"]
+[ext_resource type="Texture2D" uid="uid://cy31xgewvnykl" path="res://Games/Cables/Assets/CableMoradoDer.png" id="4_w8kry"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0npja"]
 radius = 20.0
@@ -12,15 +12,15 @@ radius = 20.0
 radius = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w8kry"]
-radius = 19.105
+radius = 21.0238
 
 [node name="CablesDer" type="Node2D"]
 script = ExtResource("1_0npja")
 
 [node name="SpriteRojo" type="Sprite2D" parent="."]
-position = Vector2(27, 58)
-scale = Vector2(1.68421, 2.66667)
-texture = ExtResource("1_des1c")
+position = Vector2(182.553, 168.333)
+scale = Vector2(6.38898, 4.05208)
+texture = ExtResource("2_4jq0r")
 
 [node name="AreaRojo" type="Area2D" parent="."]
 
@@ -29,9 +29,9 @@ position = Vector2(-2, 58)
 shape = SubResource("CircleShape2D_0npja")
 
 [node name="SpriteAmarillo" type="Sprite2D" parent="."]
-position = Vector2(25, -53)
-scale = Vector2(1.67544, 2.4375)
-texture = ExtResource("3_r45m8")
+position = Vector2(181.693, -39)
+scale = Vector2(6.44709, 3.875)
+texture = ExtResource("3_4jq0r")
 
 [node name="AreaAmarillo" type="Area2D" parent="."]
 position = Vector2(6, 0)
@@ -41,9 +41,9 @@ position = Vector2(-9, -53)
 shape = SubResource("CircleShape2D_4jq0r")
 
 [node name="SpriteMorado" type="Sprite2D" parent="."]
-position = Vector2(25, -1)
-scale = Vector2(1.67544, 2.38235)
-texture = ExtResource("4_4jq0r")
+position = Vector2(181.693, 67)
+scale = Vector2(6.44709, 4.125)
+texture = ExtResource("4_w8kry")
 
 [node name="AreaMorado" type="Area2D" parent="."]
 
