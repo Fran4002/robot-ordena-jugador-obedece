@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 func _on_spawn_timer_timeout() -> void:
 	var ast = asteroid.instantiate()
 	ast.scale *= 2.5
+	ast.z_index = -5
 	add_child(ast)
 	var screen_size = DisplayServer.window_get_size()
 	var height = randi_range(40, screen_size.y - 40)
