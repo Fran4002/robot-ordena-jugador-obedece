@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://yrne38hnos8j"]
+
+[ext_resource type="Script" uid="uid://nvc18246y0w7" path="res://Games/Cables/Scripts/cablesDer.gd" id="1_0npja"]
+[ext_resource type="Texture2D" uid="uid://ghr8qtylheyt" path="res://Games/Cables/Assets/rojoDer.png" id="1_des1c"]
+[ext_resource type="Texture2D" uid="uid://wnxuodyn8qew" path="res://Games/Cables/Assets/amarilloDer.png" id="3_r45m8"]
+[ext_resource type="Texture2D" uid="uid://blbkhykvowhkh" path="res://Games/Cables/Assets/moradoDer.png" id="4_4jq0r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0npja"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4jq0r"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w8kry"]
+radius = 19.105
+
+[node name="CablesDer" type="Node2D"]
+script = ExtResource("1_0npja")
+
+[node name="SpriteRojo" type="Sprite2D" parent="."]
+position = Vector2(27, 58)
+scale = Vector2(1.68421, 2.66667)
+texture = ExtResource("1_des1c")
+
+[node name="AreaRojo" type="Area2D" parent="."]
+
+[node name="CollisionRojo" type="CollisionShape2D" parent="AreaRojo"]
+position = Vector2(-2, 58)
+shape = SubResource("CircleShape2D_0npja")
+
+[node name="SpriteAmarillo" type="Sprite2D" parent="."]
+position = Vector2(25, -53)
+scale = Vector2(1.67544, 2.4375)
+texture = ExtResource("3_r45m8")
+
+[node name="AreaAmarillo" type="Area2D" parent="."]
+position = Vector2(6, 0)
+
+[node name="CollisionAmarillo" type="CollisionShape2D" parent="AreaAmarillo"]
+position = Vector2(-9, -53)
+shape = SubResource("CircleShape2D_4jq0r")
+
+[node name="SpriteMorado" type="Sprite2D" parent="."]
+position = Vector2(25, -1)
+scale = Vector2(1.67544, 2.38235)
+texture = ExtResource("4_4jq0r")
+
+[node name="AreaMorado" type="Area2D" parent="."]
+
+[node name="CollisionMorado" type="CollisionShape2D" parent="AreaMorado"]
+position = Vector2(-3, -1)
+shape = SubResource("CircleShape2D_w8kry")
+
+[connection signal="input_event" from="AreaRojo" to="." method="_on_area_rojo_input_event"]
+[connection signal="input_event" from="AreaAmarillo" to="." method="_on_area_amarillo_input_event"]
+[connection signal="input_event" from="AreaMorado" to="." method="_on_area_morado_input_event"]
