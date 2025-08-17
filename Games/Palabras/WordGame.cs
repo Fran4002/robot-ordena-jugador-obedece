@@ -8,7 +8,7 @@ public partial class WordGame : Node2D
 	// Referencias a nodos
 	private Label instructionLabel;
 	private Label timeLabel;
-	private Label attemptsLabel;
+	//private Label attemptsLabel;
 	private TextureRect[] wordSlots; // Slots donde van las letras ordenadas
 	private HBoxContainer availableLettersContainer; // Contenedor de letras disponibles
 	private Panel gameOverPanel;
@@ -20,7 +20,7 @@ public partial class WordGame : Node2D
 	private List<string> wordsList = new List<string> {
 	"CASA", "GATO", "AGUA", "MESA", "LUNA",
 	"AMOR", "CAFE", "VIDA", "AZUL", "ROJO",
-	"FLOR", "NUBE", "OSO",  "UVA",  "PATO",
+	"FLOR", "NUBE", "PATO",
 	"RAMA", "OLAS", "PERA", "LEON", "ALMA",
 	"PIEL", "BESO", "PESO", "HUES", "DADO",
 	"RISA", "CIMA", "HILO", "JUEZ", "FUEG",
@@ -34,9 +34,9 @@ public partial class WordGame : Node2D
 	private List<TextureButton> availableButtons = new List<TextureButton>();
 	private int currentSlot = 0; // Próximo slot donde colocar letra
 	private int attempts = 0;
-	private int maxAttempts = 3;
+	private int maxAttempts = 100;
 	private int wordsCompleted = 0; // Palabras completadas correctamente
-	private int targetWords = 4; // Necesita completar 4 palabras para ganar
+	private int targetWords = 3; // Necesita completar 4 palabras para ganar
 	private float gameTime = 180.0f; // 3 minutos para completar las 4 palabras
 	private bool isGameActive = false;
 
@@ -48,7 +48,7 @@ public partial class WordGame : Node2D
 		// Obtener referencias a nodos
 		instructionLabel = GetNode<Label>("UI/GameInfo/InstructionLabel");
 		timeLabel = GetNode<Label>("UI/GameInfo/TimeLabel");
-		attemptsLabel = GetNode<Label>("UI/GameInfo/AttemptsLabel");
+		//attemptsLabel = GetNode<Label>("UI/GameInfo/AttemptsLabel");
 		
 		wordSlots = new TextureRect[] {
 			GetNode<TextureRect>("UI/WordContainer/Letter1"),
@@ -325,7 +325,7 @@ public partial class WordGame : Node2D
 	{
 		instructionLabel.Text = "Palabra " + (wordsCompleted + 1) + "/" + targetWords + " - Ordena las letras";
 		timeLabel.Text = "Tiempo: " + ((int)gameTime) + "s";
-		attemptsLabel.Text = "Intentos fallidos: " + attempts + "/" + maxAttempts;
+		//attemptsLabel.Text = "Intentos fallidos: " + attempts + "/" + maxAttempts;
 	}
 
 	private void OnTimerTimeout()

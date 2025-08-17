@@ -17,7 +17,6 @@ color = Color(0.1, 0.1, 0.2, 1)
 
 [node name="GameInfo" type="VBoxContainer" parent="UI"]
 custom_minimum_size = Vector2(300, 200)
-anchors_preset = -1
 offset_left = 50.0
 offset_top = 50.0
 offset_right = 350.0
@@ -28,16 +27,17 @@ layout_mode = 2
 text = "Ordena las letras para formar la palabra"
 
 [node name="AttemptsLabel" type="Label" parent="UI/GameInfo"]
+visible = false
 layout_mode = 2
 text = "Intentos: 0/3"
 
 [node name="TimeLabel" type="Label" parent="UI/GameInfo"]
+visible = false
 layout_mode = 2
 text = "Tiempo: 60s"
 
 [node name="WordContainer" type="HBoxContainer" parent="UI"]
 custom_minimum_size = Vector2(400, 100)
-anchors_preset = -1
 offset_left = 368.0
 offset_top = 207.0
 offset_right = 768.0
