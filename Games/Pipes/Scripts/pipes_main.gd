@@ -74,6 +74,6 @@ func _process(delta: float) -> void:
 			queue.append(next)
 	var end = $"Pipe-End"
 	if end.checkRight() != null and $"Pipe-1".visited:
-		print("Connected")
+		$ProgressBar._next_scene()
 		pass
 	pass

@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8l2by6bpovhj"]
+
+[ext_resource type="Texture2D" uid="uid://bkjyq5g2slxkl" path="res://TV.png" id="1_uqx3h"]
+[ext_resource type="Texture2D" uid="uid://dw4dobjqhbco0" path="res://robotMalvado.png" id="2_4el73"]
+
+[sub_resource type="GDScript" id="GDScript_c7yh7"]
+script/source = "extends Control
+
+func _on_salir_pressed() -> void:
+	get_tree().quit() # Salir del juego.
+
+
+func _on_reiniciar_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Games/Cables/cables-main.tscn\") # Volver al primer escenario
+"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7kbtt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1cywo"]
+
+[node name="gameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_c7yh7")
+
+[node name="FONDO" type="ColorRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1152.0
+offset_bottom = 647.0
+texture = ExtResource("1_uqx3h")
+
+[node name="MensajeGame" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 99.0
+offset_top = -68.0
+offset_right = -725.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MensajeOver" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 703.0
+offset_top = -68.0
+offset_right = -100.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OPCIONES" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.5
+offset_top = -210.0
+offset_right = 197.5
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="OPCIONES"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_4el73")
+expand_mode = 1
+
+[node name="REINICIAR" type="Button" parent="OPCIONES"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7kbtt")
+text = "REINICIAR"
+
+[node name="SALIR" type="Button" parent="OPCIONES"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1cywo")
+text = "SALIR"
+
+[connection signal="pressed" from="OPCIONES/REINICIAR" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="OPCIONES/SALIR" to="." method="_on_salir_pressed"]

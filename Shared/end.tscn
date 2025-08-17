@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://pqco1o1ynxn7"]
+
+[ext_resource type="Script" uid="uid://dijj6pp325j4u" path="res://Shared/end.gd" id="1_a4smb"]
+[ext_resource type="Texture2D" uid="uid://bkjyq5g2slxkl" path="res://TV.png" id="1_x0eau"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mu2d5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlawx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a4smb")
+
+[node name="FONDO" type="ColorRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1152.0
+offset_bottom = 647.0
+texture = ExtResource("1_x0eau")
+
+[node name="OPCIONES" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -359.0
+offset_top = -123.0
+offset_right = 359.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="MensajeEscapar" type="Label" parent="OPCIONES"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "¡Has Escapado!"
+
+[node name="REINICIAR" type="Button" parent="OPCIONES"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mu2d5")
+text = "REINICIAR"
+
+[node name="SALIR" type="Button" parent="OPCIONES"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vlawx")
+text = "SALIR"
+
+[connection signal="pressed" from="OPCIONES/REINICIAR" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="OPCIONES/SALIR" to="." method="_on_salir_pressed"]
