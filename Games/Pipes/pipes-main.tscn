@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://e8rsjhxgpvj"]
+[gd_scene load_steps=10 format=3 uid="uid://e8rsjhxgpvj"]
 
 [ext_resource type="Script" uid="uid://02kqmrajojbi" path="res://Games/Pipes/Scripts/pipes_main.gd" id="1_02wvk"]
 [ext_resource type="Texture2D" uid="uid://cii4uk0288fa8" path="res://icon.svg" id="2_1wo8n"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bxlhtwywfi13" path="res://Games/Pipes/Scripts/pipe.gd" id="6_wkr0d"]
 [ext_resource type="Texture2D" uid="uid://lm2ywnc1b3oe" path="res://Games/Pipes/Assets/tile028.png" id="7_0hqn5"]
 [ext_resource type="Texture2D" uid="uid://bhkyaj4jh5bxg" path="res://Games/Pipes/Assets/tile015.png" id="8_fkyju"]
+[ext_resource type="PackedScene" uid="uid://2tvak5tl4xjb" path="res://Shared/timer.tscn" id="9_1wo8n"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -140,3 +141,11 @@ pivot_offset = Vector2(64, 64)
 texture_normal = ExtResource("8_fkyju")
 stretch_mode = 0
 script = ExtResource("6_wkr0d")
+
+[node name="ProgressBar" parent="." instance=ExtResource("9_1wo8n")]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 749.0
+offset_right = 830.0
+offset_bottom = 776.0
+nextScene = "res://Games/Drive/drive_main.tscn"

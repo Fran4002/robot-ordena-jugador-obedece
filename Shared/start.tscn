@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://o4hu8wjgk0x7"]
+
+[ext_resource type="Script" uid="uid://bg3ngnjl04de7" path="res://Shared/Scripts/start.gd" id="1_y7t1o"]
+[ext_resource type="Texture2D" uid="uid://cii4uk0288fa8" path="res://icon.svg" id="2_e8n6q"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y7t1o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 139.0
+offset_right = 298.0
+offset_bottom = 267.0
+texture = ExtResource("2_e8n6q")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 495.0
+offset_right = 508.0
+offset_bottom = 503.0
+text = "Pres to play"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 154.0
+offset_right = 882.0
+offset_bottom = 177.0
+text = "Robot Ordena
+Jugador Obedece"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
