@@ -15,6 +15,10 @@ run/main_scene="uid://ddt3lqcydyl77"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="Robot-Ordena-Jugador-Obedece"
