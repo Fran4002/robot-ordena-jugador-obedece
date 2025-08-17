@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddt3lqcydyl77"]
+
+[ext_resource type="Script" uid="uid://6j3bcf0kaogs" path="res://Shared/inicio.gd" id="1_d8ni0"]
+[ext_resource type="Texture2D" uid="uid://bkjyq5g2slxkl" path="res://TV.png" id="1_hwhl7"]
+[ext_resource type="Texture2D" uid="uid://dw4dobjqhbco0" path="res://robotMalvado.png" id="2_d8ni0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_16ui7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hanuu"]
+
+[node name="INICIO" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d8ni0")
+
+[node name="FONDO" type="ColorRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hwhl7")
+
+[node name="OPCIONES" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.5
+offset_top = -210.0
+offset_right = 197.5
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="TextureRect" type="TextureRect" parent="OPCIONES"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_d8ni0")
+expand_mode = 1
+
+[node name="JUGAR" type="Button" parent="OPCIONES"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_16ui7")
+text = "JUGAR"
+
+[node name="SALIR" type="Button" parent="OPCIONES"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hanuu")
+text = "SALIR"
+
+[connection signal="pressed" from="OPCIONES/JUGAR" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="OPCIONES/SALIR" to="." method="_on_salir_pressed"]
