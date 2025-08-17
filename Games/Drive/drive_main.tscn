@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3qkte1xjtfo8"]
+[gd_scene load_steps=5 format=3 uid="uid://c3qkte1xjtfo8"]
 
 [ext_resource type="Script" uid="uid://d4j24r4dej7w2" path="res://Games/Drive/Scripts/drive.gd" id="1_ghejo"]
 [ext_resource type="PackedScene" uid="uid://co5r88qv1vih1" path="res://Games/Drive/player.tscn" id="1_owb6g"]
+[ext_resource type="Texture2D" uid="uid://bkjyq5g2slxkl" path="res://TV.png" id="2_1e82g"]
 [ext_resource type="PackedScene" uid="uid://2tvak5tl4xjb" path="res://Shared/timer.tscn" id="2_ghejo"]
 
 [node name="Node2D" type="Node2D"]
@@ -13,13 +14,19 @@ wait_time = 1.2
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource("1_owb6g")]
-position = Vector2(354, 348)
+position = Vector2(253, 330)
 
 [node name="ProgressBar" parent="." instance=ExtResource("2_ghejo")]
-offset_left = 68.0
-offset_top = 558.0
-offset_right = 321.0
-offset_bottom = 585.0
+offset_left = 793.0
+offset_top = 107.0
+offset_right = 1046.0
+offset_bottom = 134.0
 continueOnTimeout = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1153.0
+offset_bottom = 647.0
+texture = ExtResource("2_1e82g")
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
