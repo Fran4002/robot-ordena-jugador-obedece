@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://csa800mt3ikwj"]
+
+[ext_resource type="Script" uid="uid://u08fmoms33bq" path="res://Games/Padlocks/Scripts/padlocks_main.gd" id="1_166ec"]
+[ext_resource type="PackedScene" uid="uid://bpn3vhco752hu" path="res://Games/Padlocks/padlock.tscn" id="1_fxi86"]
+[ext_resource type="PackedScene" uid="uid://2tvak5tl4xjb" path="res://Shared/timer.tscn" id="3_qepfn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_166ec")
+
+[node name="Lock1" parent="." instance=ExtResource("1_fxi86")]
+layout_mode = 1
+offset_left = 425.504
+offset_top = -36.48
+offset_right = 641.504
+offset_bottom = 179.52
+
+[node name="Lock2" parent="." instance=ExtResource("1_fxi86")]
+layout_mode = 1
+offset_left = 58.416
+offset_top = 199.912
+offset_right = 274.416
+offset_bottom = 415.912
+
+[node name="Lock3" parent="." instance=ExtResource("1_fxi86")]
+layout_mode = 1
+offset_left = 423.416
+offset_top = 384.912
+offset_right = 639.416
+offset_bottom = 600.912
+
+[node name="Lock4" parent="." instance=ExtResource("1_fxi86")]
+layout_mode = 1
+offset_left = 843.416
+offset_top = 221.912
+offset_right = 1059.42
+offset_bottom = 437.912
+
+[node name="ProgressBar" parent="." instance=ExtResource("3_qepfn")]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 556.0
+offset_right = 335.0
+offset_bottom = 583.0
+nextScene = "res://Games/Pipes/pipes-main.tscn"
