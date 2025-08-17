@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://duih7v3cjxwu6"]
+
+[ext_resource type="Script" uid="uid://b6lveqgu6alet" path="res://Games/Bugs/Scripts/bugs_main.gd" id="1_1hkc2"]
+[ext_resource type="PackedScene" uid="uid://d0ncok11q5qsd" path="res://Games/Bugs/bug.tscn" id="1_trrkv"]
+[ext_resource type="PackedScene" uid="uid://2tvak5tl4xjb" path="res://Shared/timer.tscn" id="3_2wnxd"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1hkc2")
+
+[node name="Bug" parent="." instance=ExtResource("1_trrkv")]
+position = Vector2(648, 120)
+
+[node name="Bug2" parent="." instance=ExtResource("1_trrkv")]
+position = Vector2(99, 540)
+
+[node name="Bug3" parent="." instance=ExtResource("1_trrkv")]
+position = Vector2(153, 113)
+
+[node name="Bug4" parent="." instance=ExtResource("1_trrkv")]
+position = Vector2(483, 309)
+
+[node name="Bug5" parent="." instance=ExtResource("1_trrkv")]
+position = Vector2(889, 210)
+
+[node name="Bug6" parent="." instance=ExtResource("1_trrkv")]
+position = Vector2(279, 472)
+
+[node name="Bug7" parent="." instance=ExtResource("1_trrkv")]
+position = Vector2(721, 441)
+
+[node name="ProgressBar" parent="." instance=ExtResource("3_2wnxd")]
+offset_left = 55.0
+offset_top = 582.0
+offset_right = 308.0
+offset_bottom = 609.0
+nextScene = "res://Games/Drive/drive_main.tscn"
