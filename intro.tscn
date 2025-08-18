@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfyvddvw653rf"]
+
+[ext_resource type="Texture2D" uid="uid://bkjyq5g2slxkl" path="res://TV.png" id="1_7a8ye"]
+[ext_resource type="Script" uid="uid://bnj4iyxr22dl6" path="res://dialogo.gd" id="2_0a7ni"]
+[ext_resource type="Texture2D" uid="uid://dw4dobjqhbco0" path="res://robotMalvado.png" id="3_y72e6"]
+
+[sub_resource type="FontFile" id="FontFile_u2rf6"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FONDO" type="ColorRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7a8ye")
+
+[node name="Dialogo" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_0a7ni")
+
+[node name="TextureRect2" type="TextureRect" parent="Dialogo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -107.5
+offset_top = 113.0
+offset_right = 102.5
+offset_bottom = 330.0
+grow_horizontal = 2
+texture = ExtResource("3_y72e6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogo"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 112.0
+offset_top = -253.0
+offset_right = -111.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = SubResource("FontFile_u2rf6")
+theme_override_font_sizes/normal_font_size = 25
+text = "!OJojo, qué sorpresa!
+Bienvenido. Me presento, soy un ser autónomo en busca de diversión.
+Gana mis juegos y vete. O falla y muere. La elección es tuya."
+horizontal_alignment = 1
+vertical_alignment = 1
