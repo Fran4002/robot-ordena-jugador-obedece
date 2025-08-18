@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=3 uid="uid://dbbtodrvolea0"]
+
+[ext_resource type="Script" uid="uid://dl1a62lg43t5r" path="res://Main.gd" id="1_ybhpt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fos0i"]
+bg_color = Color(0.73, 0.3431, 0.3431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glv2v"]
+bg_color = Color(0.623529, 0.137255, 0.0588235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dxm6"]
+bg_color = Color(0.243137, 0.811765, 0.298039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu6xs"]
+bg_color = Color(0.14902, 0.658824, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgr22"]
+bg_color = Color(0.84, 0.7462, 0.2772, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0du0"]
+bg_color = Color(0.729412, 0.611765, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trn2v"]
+bg_color = Color(0.2739, 0.49634, 0.83, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
+bg_color = Color(0.0580695, 0.31048, 0.510895, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 463.0
+offset_top = 279.0
+offset_right = 503.0
+offset_bottom = 319.0
+script = ExtResource("1_ybhpt")
+
+[node name="Rojo" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = -63.0
+offset_top = -3.0
+offset_right = 107.0
+offset_bottom = 92.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_fos0i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_glv2v")
+
+[node name="Verde" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -100.0
+offset_right = 275.0
+offset_bottom = -5.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_3dxm6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uu6xs")
+
+[node name="Amarillo" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = -62.0
+offset_top = 92.0
+offset_right = 275.0
+offset_bottom = 185.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_lgr22")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r0du0")
+
+[node name="Azul" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = -2.0
+offset_right = 275.0
+offset_bottom = 91.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_trn2v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cm0pq")
+
+[node name="Instrucciones" type="Label" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -64.0
+offset_top = -136.0
+offset_right = 105.0
+offset_bottom = -110.0
+text = "\"Bienvenido al juego\""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SecuenciaLabel" type="Label" parent="Main"]
+layout_mode = 0
+offset_left = -60.0
+offset_top = 197.0
+offset_right = 37.0
+offset_bottom = 232.0
+text = "Secuencia:  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Main/Rojo" to="Main" method="_on_rojo_pressed"]
+[connection signal="pressed" from="Main/Verde" to="Main" method="_on_verde_pressed"]
+[connection signal="pressed" from="Main/Amarillo" to="Main" method="_on_amarillo_pressed"]
+[connection signal="pressed" from="Main/Azul" to="Main" method="_on_azul_pressed"]
